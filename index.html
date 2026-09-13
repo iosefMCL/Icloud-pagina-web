@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icloud Venta de iPhones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos100.css">
+</head>
+<body>
+
+<header id="encabezado">
+  <div class="contenedor barra-superior">
+    <a href="#inicio" class="logo"><span>Icloud</span></a>
+
+    <nav id="menu-escritorio" aria-label="Menú principal">
+      <ul>
+        <li><a href="#celulares">Celulares</a></li>
+        <li><a href="#envios">Envíos</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+
+    <div class="acciones">
+      <!-- Botón del carrito -->
+      <button class="boton-carrito" id="boton-carrito" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="contador" id="contador">0</span>
+      </button>
+
+      <!-- Botón hamburguesa -->
+      <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <nav id="menu" aria-label="Menú móvil">
+    <ul>
+      <li><a href="#celulares">Celulares</a></li>
+      <li><a href="#envios">Envíos</a></li>
+      <li><a href="#contactos">Contactos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ==================== PANEL DEL CARRITO ==================== -->
+<div class="fondo-oscuro" id="fondo-oscuro"></div>
+<aside class="panel-carrito" id="panel-carrito" aria-hidden="true">
+  <div class="titulo-panel">
+    <h3>Tu carrito</h3>
+    <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar carrito">&times;</button>
+  </div>
+
+  <ul id="lista-productos">
+    <!-- Acá se van a agregar los productos con JavaScript -->
+  </ul>
+
+  <div class="pie-panel">
+    <div class="fila-total">
+      <span>Total</span>
+      <span id="total">S/ 0</span>
+    </div>
+    <button class="boton-confirmar" id="boton-confirmar" disabled>Ir a envíos</button>
+  </div>
+</aside>
+
+<main id="inicio">
+
+  <section class="presentacion">
+    <div class="contenedor">
+      <p class="pretitulo">Nueva línea disponible</p>
+      <h1>El iPhone que buscas,<br>listo para enviarse hoy.</h1>
+      <p class="subtexto">Equipos originales, sellados de fábrica y con garantía. Elige tu modelo y coordina el envío en el mismo lugar.</p>
+      <a href="#celulares" class="boton-hero">Ver modelos</a>
+    </div>
+  </section>
+
+  <section id="celulares">
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <div>
+          <h2>Celulares disponibles</h2>
+          <p>5 modelos en stock. Precio, ficha y compra desde aquí.</p>
+        </div>
+      </div>
+
+      <article class="producto-destacado tarjeta">
+        <div class="imagen-producto">
+          <img src="https://mac-center.com.pe/cdn/shop/files/IMG-21463722_m_jpeg_1_25105327-5ebb-47db-8a5f-b4eaab8e7509.jpg?v=1788983401&width=823" alt="iPhone 17 Pro Max" loading="lazy">
+        </div>
+        <div class="info">
+          <span class="etiqueta">Nuevo</span>
+          <h3>iPhone Duo</h3>
+          <p class="detalle">La gama más alta del iPhone. Chip de última generación(A20 PRO), cámara profesional y acabado en titanio. 256GB.</p>
+          <p class="precio">S/ 9,899</p>
+          <button class="boton-agregar" data-nombre="iPhone Duo" data-precio="9899">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <div class="lista-celulares">
+
+        <article class="tarjeta">
+          <div class="imagen-producto">
+            <img src="https://unaluka.com/cdn/shop/files/pro-max-borgona-1_d0ba1d6d-19df-4b1b-9f47-7e5245bca9d3_1024x1024.png?v=1788983958" alt="iPhone 18 Pro Max" loading="lazy">
+          </div>
+          <div class="info">
+            <span class="etiqueta">Nuevo</span>
+            <h3>iPhone 18 Pro Max</h3>
+            <p class="detalle">la gama mas alta del iPhone en la version 18, dos Neural Engine de 16 núcleos. 512GB.</p>
+            <p class="precio">S/ 7,999</p>
+            <button class="boton-agregar" data-nombre="iPhone 18 Pro Max" data-precio="7999">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="imagen-producto">
+            <img src="https://pe.tiendasishop.com/cdn/shop/files/IMG-18068234_m_jpeg_1_f6a35953-98a1-47e9-9233-05f09a84336a.jpg?v=1757449980&width=550" alt="iPhone 17 Pro" loading="lazy">
+          </div>
+          <div class="info">
+            <span class="etiqueta">Nuevo</span>
+            <h3>iPhone 17 Pro</h3>
+            <p class="detalle">Rendimiento profesional en un cuerpo más compacto. 128GB.</p>
+            <p class="precio">S/ 5,999</p>
+            <button class="boton-agregar" data-nombre="iPhone 17 Pro" data-precio="5999">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="imagen-producto">
+            <img src="https://pe.tiendasishop.com/cdn/shop/files/IMG-18057261_m_jpeg_1_80397794-dcd2-4ed9-aa61-6ee0fca8d412.webp?v=1757720011&width=550" alt="iPhone 17" loading="lazy">
+          </div>
+          <div class="info">
+            <span class="etiqueta">Nuevo</span>
+            <h3>iPhone 17</h3>
+            <p class="detalle">El equilibrio perfecto entre potencia y precio. 128GB.</p>
+            <p class="precio">S/ 4,799</p>
+            <button class="boton-agregar" data-nombre="iPhone 17" data-precio="4799">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="imagen-producto">
+            <img src="https://pe.tiendasishop.com/cdn/shop/files/IMG-18068333_m_jpeg_1.jpg?v=1757449721&width=550" alt="iPhone Air" loading="lazy">
+          </div>
+          <div class="info">
+            <span class="etiqueta">Nuevo</span>
+            <h3>iPhone Air</h3>
+            <p class="detalle">El diseño más delgado hasta ahora, sin sacrificar autonomía. 256GB.</p>
+            <p class="precio">S/ 5,299</p>
+            <button class="boton-agregar" data-nombre="iPhone Air" data-precio="5299">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== ENVÍOS (FORMULARIO) ==================== -->
+  <section id="envios">
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <div>
+          <h2>Datos de envío</h2>
+          <p>Completa el formulario para coordinar la entrega de tu compra.</p>
+        </div>
+      </div>
+
+      <div class="grid-formulario">
+        <form id="formulario">
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="campo">
+            <label for="direccion">Dirección de entrega</label>
+            <input type="text" id="direccion" name="direccion" required>
+          </div>
+
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" id="ciudad" name="ciudad" placeholder="Ej. Lima, Arequipa, Cusco" required>
+            </div>
+            <div class="campo">
+              <label for="metodo">Método de envío</label>
+              <select id="metodo" name="metodo">
+                <option value="estandar">Estándar (3-5 días hábiles, Lima y provincias)</option>
+                <option value="express">Express (24-48h, solo Lima Metropolitana)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="notas">Notas para la entrega (opcional)</label>
+            <textarea id="notas" name="notas" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="boton-enviar">Confirmar envío</button>
+          <p id="mensaje">Datos recibidos. Te contactaremos para coordinar la entrega.</p>
+        </form>
+
+        <aside class="nota">
+          <h3>Antes de confirmar</h3>
+          <ul>
+            <li>Precios incluyen IGV.</li>
+            <li>El envío se coordina una vez confirmado el pago.</li>
+            <li>Los equipos salen sellados de fábrica.</li>
+            <li>Puedes seguir el estado del pedido por correo.</li>
+            <li>Envío express disponible solo en Lima Metropolitana.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- ==================== PIE DE PÁGINA / CONTACTOS ==================== -->
+<footer id="contactos">
+  <div class="contenedor">
+    <div class="columnas-pie">
+      <div>
+        <h4>Icloud</h4>
+        <p>Venta de iPhones originales, con garantía y envío coordinado a todo el Perú.</p>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <ul>
+          <li><a href="mailto:contacto@icloudperu.pe">contacto@icloudperu.pe</a></li>
+          <li><a href="tel:+51987654321">+51 987 654 321</a></li>
+          <li><a href="#envios">Coordinar envío</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#celulares">Celulares</a></li>
+          <li><a href="#envios">Envíos</a></li>
+          <li><a href="#inicio">Volver arriba</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="linea-final">
+      <span>&copy; <span id="anio"></span> Icloud. Todos los derechos reservados.</span>
+      <span>Imágenes de los equipos: tiendasishop.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  // ENCABEZADO CON SOMBRA AL HACER SCROLL  var encabezado = document.getElementById('encabezado');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 8) {
+      encabezado.classList.add('con-sombra');
+    } else {
+      encabezado.classList.remove('con-sombra');
+    }
+  });
+
+  // MENÚ HAMBURGUESA (SOLO MÓVIL)
+  var botonMenu = document.getElementById('boton-menu');
+  var menu = document.getElementById('menu');
+
+  botonMenu.addEventListener('click', function () {
+    menu.classList.toggle('abierto');
+
+    if (menu.classList.contains('abierto')) {
+      botonMenu.setAttribute('aria-expanded', 'true');
+    } else {
+      botonMenu.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  var enlacesMenu = menu.querySelectorAll('a');
+  for (var i = 0; i < enlacesMenu.length; i++) {
+    enlacesMenu[i].addEventListener('click', function () {
+      menu.classList.remove('abierto');
+      botonMenu.setAttribute('aria-expanded', 'false');
+    });
+  }
+  // ANIMACIÓN DE ENTRADA AL HACER SCROLL (tarjetas)
+  var tarjetas = document.querySelectorAll('.tarjeta');
+  var observador = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        observador.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  tarjetas.forEach(function (tarjeta) {
+    observador.observe(tarjeta);
+  });
+  // CARRITO DE COMPRAS
+  var carrito = [];
+
+  var botonCarrito = document.getElementById('boton-carrito');
+  var panelCarrito = document.getElementById('panel-carrito');
+  var fondoOscuro = document.getElementById('fondo-oscuro');
+  var botonCerrar = document.getElementById('boton-cerrar');
+  var listaProductos = document.getElementById('lista-productos');
+  var contador = document.getElementById('contador');
+  var totalTexto = document.getElementById('total');
+  var botonConfirmar = document.getElementById('boton-confirmar');
+  var botonesAgregar = document.querySelectorAll('.boton-agregar');
+
+  function abrirCarrito() {
+    panelCarrito.classList.add('abierto');
+    fondoOscuro.classList.add('abierto');
+    panelCarrito.setAttribute('aria-hidden', 'false');
+  }
+
+  function cerrarCarrito() {
+    panelCarrito.classList.remove('abierto');
+    fondoOscuro.classList.remove('abierto');
+    panelCarrito.setAttribute('aria-hidden', 'true');
+  }
+
+  botonCarrito.addEventListener('click', abrirCarrito);
+  botonCerrar.addEventListener('click', cerrarCarrito);
+  fondoOscuro.addEventListener('click', cerrarCarrito);
+
+  function buscarProducto(nombre) {
+    for (var i = 0; i < carrito.length; i++) {
+      if (carrito[i].nombre === nombre) {
+        return carrito[i];
+      }
+    }
+    return null;
+  }
+
+  function agregarAlCarrito(nombre, precio) {
+    var producto = buscarProducto(nombre);
+
+    if (producto) {
+      producto.cantidad = producto.cantidad + 1;
+    } else {
+      carrito.push({ nombre: nombre, precio: precio, cantidad: 1 });
+    }
+
+    dibujarCarrito();
+
+    contador.classList.add('animar');
+    setTimeout(function () {
+      contador.classList.remove('animar');
+    }, 180);
+  }
+
+  function cambiarCantidad(nombre, cambio) {
+    var producto = buscarProducto(nombre);
+    if (!producto) {
+      return;
+    }
+
+    producto.cantidad = producto.cantidad + cambio;
+
+    if (producto.cantidad <= 0) {
+      quitarProducto(nombre);
+      return;
+    }
+
+    dibujarCarrito();
+  }
+
+  function quitarProducto(nombre) {
+    var nuevoCarrito = [];
+    for (var i = 0; i < carrito.length; i++) {
+      if (carrito[i].nombre !== nombre) {
+        nuevoCarrito.push(carrito[i]);
+      }
+    }
+    carrito = nuevoCarrito;
+    dibujarCarrito();
+  }
+
+  function dibujarCarrito() {
+
+    var unidadesTotales = 0;
+    var precioTotal = 0;
+
+    for (var i = 0; i < carrito.length; i++) {
+      unidadesTotales = unidadesTotales + carrito[i].cantidad;
+      precioTotal = precioTotal + (carrito[i].precio * carrito[i].cantidad);
+    }
+
+    contador.textContent = unidadesTotales;
+    totalTexto.textContent = 'S/ ' + precioTotal.toLocaleString('es-PE');
+    botonConfirmar.disabled = carrito.length === 0;
+
+    listaProductos.innerHTML = '';
+
+    if (carrito.length === 0) {
+      listaProductos.innerHTML = '<li class="carrito-vacio">Tu carrito está vacío.</li>';
+      return;
+    }
+
+    for (var i = 0; i < carrito.length; i++) {
+      var producto = carrito[i];
+
+      var fila = document.createElement('li');
+      fila.className = 'producto-carrito';
+      fila.innerHTML =
+        '<div class="datos-producto">' +
+          '<h4>' + producto.nombre + '</h4>' +
+          '<p>S/ ' + producto.precio.toLocaleString('es-PE') + ' c/u</p>' +
+          '<button class="boton-quitar" data-nombre="' + producto.nombre + '">Quitar</button>' +
+        '</div>' +
+        '<div class="cantidad">' +
+          '<button class="boton-restar" data-nombre="' + producto.nombre + '">-</button>' +
+          '<span>' + producto.cantidad + '</span>' +
+          '<button class="boton-sumar" data-nombre="' + producto.nombre + '">+</button>' +
+        '</div>';
+
+      listaProductos.appendChild(fila);
+    }
+
+    var botonesSumar = listaProductos.querySelectorAll('.boton-sumar');
+    var botonesRestar = listaProductos.querySelectorAll('.boton-restar');
+    var botonesQuitar = listaProductos.querySelectorAll('.boton-quitar');
+
+    for (var i = 0; i < botonesSumar.length; i++) {
+      botonesSumar[i].addEventListener('click', function () {
+        cambiarCantidad(this.dataset.nombre, 1);
+      });
+    }
+    for (var i = 0; i < botonesRestar.length; i++) {
+      botonesRestar[i].addEventListener('click', function () {
+        cambiarCantidad(this.dataset.nombre, -1);
+      });
+    }
+    for (var i = 0; i < botonesQuitar.length; i++) {
+      botonesQuitar[i].addEventListener('click', function () {
+        quitarProducto(this.dataset.nombre);
+      });
+    }
+  }
+
+  for (var i = 0; i < botonesAgregar.length; i++) {
+    botonesAgregar[i].addEventListener('click', function () {
+      var nombre = this.dataset.nombre;
+      var precio = Number(this.dataset.precio);
+      agregarAlCarrito(nombre, precio);
+      abrirCarrito();
+    });
+  }
+
+  botonConfirmar.addEventListener('click', function () {
+    cerrarCarrito();
+    document.getElementById('envios').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  dibujarCarrito();
+
+  var formulario = document.getElementById('formulario');
+  var mensaje = document.getElementById('mensaje');
+
+  formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+    mensaje.classList.add('mostrar');
+    formulario.reset();
+
+    carrito = []; 
+    dibujarCarrito(); 
+
+  });
+
+  document.getElementById('anio').textContent = new Date().getFullYear();
+
+
+</script>
+
+</body>
+</html>
